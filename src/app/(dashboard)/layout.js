@@ -8,6 +8,10 @@ import Sidebar from "@/components/Sidebar";
 
 // Feature Modals
 import { LoaderPage } from "@/components/LoaderPage";
+import { CreateWorkspaceModal } from "@/features/workspaces/components/CreateWorkspaceModal";
+import { CreateProjectModal } from "@/features/projects/components/CreateProjectModal";
+import { CreateTaskModal } from "@/features/tasks/components/CreateTaskModal";
+import { EditTaskModal } from "@/features/tasks/components/EditTaskModal";
 
 /**
  * DashboardLayout - Main layout component for the dashboard area
@@ -18,10 +22,10 @@ function DashboardLayout({ children }) {
     <Suspense fallback={<LoaderPage />}>
       <div className="min-h-screen">
         {/* Global Modals */}
-        {/* <CreateWorkspaceModal />
+        <CreateWorkspaceModal />
         <CreateProjectModal />
         <CreateTaskModal />
-        <EditTaskModal /> */}
+        <EditTaskModal />
 
         <div className="flex w-full h-full">
           {/* Sidebar */}
